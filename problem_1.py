@@ -1,22 +1,20 @@
 import math
 
+
 def square_root(target):
 
-    if target == 0:
-        return 0
-
-    if target == 1:
-        return 1
-
     if target < 0 or not isinstance(target, int):
-        raise ValueError('target must be positive integer') 
+        raise ValueError('target must be positive integer')
+
+    if target == 0 or target == 1:
+        return target
 
     value_begin = 0
     value_end = target
 
     while value_begin < value_end:
         value_mid = math.floor((value_begin + value_end)/2)
-        
+
         if value_begin == value_mid:
             break
 
@@ -29,6 +27,7 @@ def square_root(target):
             break
 
     return value_mid
+
 
 print('Pass' if square_root(36) == 6 else 'Fail')
 print('Pass' if square_root(27) == 5 else 'Fail')
