@@ -39,4 +39,4 @@ test_function([4, -4, -100, 5, 9, 8])
 
 # Edge cases
 test_function([4])
-print(get_min_max([])) # Output: (None, None)
+print(get_min_max([]))  # Output: (None, None)
