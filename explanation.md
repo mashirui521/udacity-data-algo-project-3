@@ -76,7 +76,7 @@ Since the approach is using a in-place sorting algorithm, the space complexity i
 Building a Trie to realize the autocomplete and give suggestions for the given input suffix. 
 
 ## Choice of Data Structure
-Trie is a tree, each path from root node and lief node is indicating a word. For each `TrieNode`, the flag `is_word` is indicating whether it can build a complete word. The flag in lief nodes are `True`, while in other nodes are `False`.
+Trie is a tree, each path from root node to lief node is indicating a word. For each `TrieNode`, the flag `is_word` is indicating whether it can build a complete word. The flag in lief nodes are `True`, while in other nodes are `False`.
 
 ## Time and Space Complexity
 **Time complexity**
