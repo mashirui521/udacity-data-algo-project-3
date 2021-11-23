@@ -81,10 +81,12 @@ Trie is a tree, each path from root node to lief node is indicating a word. For 
 
 ## Time and Space Complexity
 **Time complexity**
-Inserting and finding a word by performing a traversal through the tree, the time complexity is O(n), depending on the length of words to be inserted and searched.
+
+Inserting (method `insert`) and finding (method `find`) a word by performing a traversal through the `Trie` by looping over the characters given in the input word. The time complexity is O(n), depending on the number of characters in the word.
 
 **Space complexity**
-The space complexity is O(n * m) depending on the number of words (`n`) saving in the tree and the length of word `m` 
+
+The space complexity of `insert` and `find` is O(n * m) depending on the number of words (`n`) saving in the `Trie` and the number of characters `m`. In the worst case, all words saved in the `Trie` don't have any common characters.
 
 
 # Problem 6: Max and Min in a Unsorted Array
@@ -117,8 +119,8 @@ Similar as Problem 5, instead of create `TrieNode`s for saving characters in a s
 ## Time and Space Complexity
 **Time complexity**
 
-Inserting and finding a path by performing a traversal through the tree, the time complexity is O(n), depending on the depth of the given path.
+The `insert` and `find` methods in the `RouteTrie` are using a loop over the path parts, which is separated by `/`. The time complexity is O(n), depending on the number of parts.
 
 **Space complexity**
 
-The space complexity is O(n * m) depending on the number of paths (`n`) saving in the tree and the path depth `m`
+The space complexity of inserting and finding path in `RouteTrie`is O(n * m) depending on the number of paths (`n`) and the number of parts `m` from the given path. The worst case would be having `n` paths in the `RouteTrie`, but they don't have any common parts.
