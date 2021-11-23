@@ -63,6 +63,7 @@ Since the result array will be in form of [0, 0, 0, 1, 1, 2, 2, 2], it is necess
 
 ## Time and Space Complexity
 **Time complexity**
+
 The approach is performing a single traversal through the given array, which time complexity is **O(n)**
 
 
