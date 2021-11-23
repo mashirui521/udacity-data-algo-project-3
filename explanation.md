@@ -82,7 +82,7 @@ Trie is a tree, each path from root node to lief node is indicating a word. For 
 ## Time and Space Complexity
 **Time complexity**
 
-Inserting (method `insert`) and finding (method `find`) a word by performing a traversal through the `Trie` by looping over the characters given in the input word. The time complexity is O(n), depending on the number of characters in the word.
+Inserting (method `insert`) and finding (method `find`) a word by looping over the characters given in the input word. The time complexity is O(n), depending on the number of characters in the word.
 
 **Space complexity**
 
@@ -119,7 +119,7 @@ Similar as Problem 5, instead of create `TrieNode`s for saving characters in a s
 ## Time and Space Complexity
 **Time complexity**
 
-The `insert` and `find` methods in the `RouteTrie` are using a loop over the path parts, which is separated by `/`. The time complexity is O(n), depending on the number of parts.
+The `insert` and `find` methods in the `RouteTrie` are using a loop over the path parts. The time complexity is O(n), depending on the number of parts.
 
 **Space complexity**
 
