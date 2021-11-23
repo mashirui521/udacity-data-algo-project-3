@@ -63,7 +63,7 @@ Since the result array will be in form of [0, 0, 0, 1, 1, 2, 2, 2], it is necess
 
 ## Time and Space Complexity
 **Time complexity**
-The using approach is mostly a variance of quicksort algorithm, which complexity is **O(n log(n))**
+The approach is performing a single traversal through the given array, which time complexity is **O(n)**
 
 
 **Space complexity**
