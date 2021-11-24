@@ -84,9 +84,13 @@ Trie is a tree, each path from root node to lief node is indicating a word. For 
 
 Inserting (method `insert`) and finding (method `find`) a word by looping over the characters given in the input word. The time complexity is O(n), depending on the number of characters in the word.
 
+Finding suffixes from a trie node, it will recursively loop over all sub-nodes. The time complexity is O(n), depending on the number of sub-nodes
+
 **Space complexity**
 
 The space complexity of `insert` and `find` is O(n * m) depending on the number of words (`n`) saving in the `Trie` and the number of characters `m`. In the worst case, all words saved in the `Trie` don't have any common characters.
+
+For finding suffixes from a trie node, the space complexity is O(n), depending on the number of sub-nodes.
 
 
 # Problem 6: Max and Min in a Unsorted Array
@@ -119,8 +123,12 @@ Similar as Problem 5, instead of create `TrieNode`s for saving characters in a s
 ## Time and Space Complexity
 **Time complexity**
 
-The `insert` and `find` methods in the `RouteTrie` are using a loop over the path parts. The time complexity is O(n), depending on the number of parts.
+On adding and looking up a handler in the `Router`, the given path will firstly be separated into a number of parts by `__split__` function, which time complexity is O(n), depending on the number of parts in the path. Afterwards, it will insert or find a handler for the given path in the `RouteTrie`, which will perform a loop over the path parts. The time complexity is O(n) as well.
 
 **Space complexity**
 
 The space complexity of inserting and finding path in `RouteTrie`is O(n * m) depending on the number of paths (`n`) and the number of parts `m` from the given path. The worst case would be having `n` paths in the `RouteTrie`, but they don't have any common parts.
+
+The space complexity of splitting the path is O(n) depending the number of parts in the given path.
+
+Since adding and looking up a handler in the `Router` will firstly split the path into a list of path parts and insert/find the parts in the trie. The worst case space complexity is O(n * m)
